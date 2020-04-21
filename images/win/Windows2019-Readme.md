@@ -10,74 +10,99 @@ The following software is installed on machines with the 20200319.1 update.
 Components marked with **\*** have been upgraded since the previous version of the image.
 
 
+## Installed Software
+
+### Language and Runtime
+* Powershell Core 7.0.0
+* Perl v5.30.2
+### Package Management
+* Chocolatey 0.10.15
+### Project Management
+* Gradle 6.2.2
+### Utilities
+* Docker 19.03.5
+* Docker-compose 1.25.4
+* Helm v3.1.2+gd878d4d
+* Git 2.25.1
+### Tools
+* Cmake 3.16.5
+* Azure CLI 2.2.0
+### Browsers
+* Google Chrome 80.0.3987.149
+* Microsoft Edge 80.0.361.66
+* Mozilla Firefox 74.0
+### Visual Studio
+#### Visual Studio 2019 Enterprise
+Version: VisualStudio/16.5.0+29911.84
+Location: C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise
+
+| The following workloads and components are installed with Visual Studio 2019 |
+| -------- |
+ | Component.Dotfuscator<br>Component.Linux.CMake<br>Component.UnityEngine.x64<br>Component.UnityEngine.x86<br>Component.Unreal.Android<br>Microsoft.Component.Azure.DataLake.Tools<br>Microsoft.Component.CookiecutterTools<br>Microsoft.Component.PythonTools.Miniconda<br>Microsoft.Component.PythonTools.Web<br>Microsoft.Component.VC.Runtime.UCRTSDK<br>Microsoft.Net.ComponentGroup.4.6.2.DeveloperTools<br>Microsoft.Net.ComponentGroup.4.7.1.DeveloperTools<br>Microsoft.Net.Component.4.7.2.SDK<br>Microsoft.Net.Component.4.7.2.TargetingPack<br>Microsoft.Net.ComponentGroup.4.7.2.DeveloperTools<br>Microsoft.Net.ComponentGroup.4.7.DeveloperTools<br>Microsoft.VisualStudio.Component.AspNet45<br>Microsoft.VisualStudio.Component.Azure.Kubernetes.Tools<br>Microsoft.VisualStudio.Component.Azure.MobileAppsSdk<br>Microsoft.VisualStudio.Component.Azure.ServiceFabric.Tools<br>Microsoft.VisualStudio.Component.Azure.Storage.AzCopy<br>Microsoft.VisualStudio.Component.Debugger.JustInTime<br>Microsoft.VisualStudio.Component.DslTools<br>Microsoft.VisualStudio.Component.EntityFramework<br>Microsoft.VisualStudio.Component.FSharp.Desktop<br>Microsoft.VisualStudio.Component.LinqToSql<br>Microsoft.VisualStudio.Component.PortableLibrary<br>Microsoft.VisualStudio.Component.TeamOffice<br>Microsoft.VisualStudio.Component.TestTools.CodedUITest<br>Microsoft.VisualStudio.Component.TestTools.WebLoadTest<br>Microsoft.VisualStudio.Component.UWP.VC.ARM64<br>Microsoft.VisualStudio.Component.VC.140<br>Microsoft.VisualStudio.Component.VC.ATL.ARM<br>Microsoft.VisualStudio.Component.VC.ATLMFC<br>Microsoft.VisualStudio.Component.VC.ATLMFC.Spectre<br>Microsoft.VisualStudio.Component.VC.CLI.Support<br>Microsoft.VisualStudio.Component.VC.CMake.Project<br>Microsoft.VisualStudio.Component.VC.DiagnosticTools<br>Microsoft.VisualStudio.Component.VC.Llvm.ClangToolset<br>Microsoft.VisualStudio.Component.VC.MFC.ARM<br>Microsoft.VisualStudio.Component.VC.MFC.ARM.Spectre<br>Microsoft.VisualStudio.Component.VC.MFC.ARM64<br>Microsoft.VisualStudio.Component.VC.MFC.ARM64.Spectre<br>Microsoft.VisualStudio.Component.VC.Redist.MSM<br>Microsoft.VisualStudio.Component.VC.Runtimes.ARM.Spectre<br>Microsoft.VisualStudio.Component.VC.Runtimes.ARM64.Spectre<br>Microsoft.VisualStudio.Component.VC.Runtimes.x86.x64.Spectre<br>Microsoft.VisualStudio.Component.VC.TestAdapterForBoostTest<br>Microsoft.VisualStudio.Component.VC.TestAdapterForGoogleTest<br>Microsoft.VisualStudio.Component.VC.v141<br>Microsoft.VisualStudio.Component.VC.v141.x86.x64<br>Microsoft.VisualStudio.Component.VC.v141.x86.x64.Spectre<br>Microsoft.VisualStudio.Component.VC.v141.ARM.Spectre<br>Microsoft.VisualStudio.Component.VC.v141.ARM64.Spectre<br>Microsoft.VisualStudio.Component.VC.v141.ATL.ARM.Spectre<br>Microsoft.VisualStudio.Component.VC.v141.ATL.ARM64.Spectre<br>Microsoft.VisualStudio.Component.VC.v141.ATL.Spectre<br>Microsoft.VisualStudio.Component.VC.v141.MFC.ARM.Spectre<br>Microsoft.VisualStudio.Component.VC.v141.MFC.ARM64.Spectre<br>Microsoft.VisualStudio.Component.VC.v141.MFC.Spectre<br>Microsoft.VisualStudio.Component.Windows10SDK.16299<br>Microsoft.VisualStudio.Component.Windows10SDK.17134<br>Microsoft.VisualStudio.Component.Windows10SDK.17763<br>Microsoft.VisualStudio.Component.Windows10SDK.18362<br>Microsoft.VisualStudio.Component.WinXP<br>Microsoft.VisualStudio.ComponentGroup.Azure.CloudServices<br>Microsoft.VisualStudio.ComponentGroup.Azure.ResourceManager.Tools<br>Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Llvm.Clang<br>Microsoft.VisualStudio.ComponentGroup.Web.CloudTools<br>Microsoft.VisualStudio.Workload.Azure<br>Microsoft.VisualStudio.Workload.Data<br>Microsoft.VisualStudio.Workload.DataScience<br>Microsoft.VisualStudio.Workload.ManagedDesktop<br>Microsoft.VisualStudio.Workload.ManagedGame<br>Microsoft.VisualStudio.Workload.NativeCrossPlat<br>Microsoft.VisualStudio.Workload.NativeDesktop<br>Microsoft.VisualStudio.Workload.NativeGame<br>Microsoft.VisualStudio.Workload.NativeMobile<br>Microsoft.VisualStudio.Workload.NetCoreTools<br>Microsoft.VisualStudio.Workload.NetCrossPlat<br>Microsoft.VisualStudio.Workload.NetWeb<br>Microsoft.VisualStudio.Workload.Node<br>Microsoft.VisualStudio.Workload.Office<br>Microsoft.VisualStudio.Workload.Python<br>Microsoft.VisualStudio.Workload.Universal<br>Microsoft.VisualStudio.Workload.VisualStudioExtension |
+### Android
+#### Android SDK Build Tools
+
+| Version| Location|
+| -------------------------------------- | -------- |
+|  29.0.3   | C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.3 |
+|  29.0.2 | C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  29.0.0 | C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  28.0.3 | C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  28.0.2 | C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  28.0.1 | C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  28.0.0 | C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  27.0.3| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  27.0.2| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  27.0.1| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  27.0.0 | C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|   26.0.3| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  26.0.2| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|   26.0.1| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  26.0.0| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  25.0.3| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  25.0.2| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  25.0.1| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  25.0.0 | C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  24.0.3| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  24.0.2| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  24.0.1| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  24.0.0| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  23.0.3| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  23.0.2| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  23.0.1| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  22.0.1| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  21.1.2| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  20.0.0| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
+|  19.1.0| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
 
 
-## Chocolatey
+#### Android SDK Platforms
 
-
-| Version   | Path                            |
-| --------- | ------------------------------- |
-|  0.10.15  | contains location for choco.exe |
-
-
-
-## Docker
-
-| Version   | Path                            |
-| --------- | ------------------------------- |
-|  19.03.5  | contains location of docker.exe |
-
-
-
-## Docker-compose
-
-| Version  | Path                                    |
-| -------- | --------------------------------------- |
-|  1.25.4  | contains location of docker-compose.exe |
-
-
-
-## Helm
-
-| Version           | Path                      |
-| ----------------- | ------------------------- |
-|  v3.1.2+gd878d4d  | contains location of helm |
-
-
-## Powershell Core
-
-
-
-_Version:_ 7.0.0
-
-<br/>
-
-
+ | Version | Location |
+ |---|---|
+ |10 (API 29)|C:\Program Files (x86)\Android\android-sdk\platforms\android-29|
+ |9 (API 28)|C:\Program Files (x86)\Android\android-sdk\platforms\android-28|
+ | 8.1.0 (API 27)| C:\Program Files (x86)\Android\android-sdk\platforms\android-27|
+ |8.0.0 (API 26)|C:\Program Files (x86)\Android\android-sdk\platforms\android-26|
+ |7.1.1 (API 25)|C:\Program Files (x86)\Android\android-sdk\platforms\android-25|
+ |7.0 (API 24)|C:\Program Files (x86)\Android\android-sdk\platforms\android-24|
+ |6.0 (API 23)|C:\Program Files (x86)\Android\android-sdk\platforms\android-23|
+ |5.1.1 (API 22)|C:\Program Files (x86)\Android\android-sdk\platforms\android-22|
+ |5.0.1 (API 21)|C:\Program Files (x86)\Android\android-sdk\platforms\android-21|
+ |4.4.2 (API 19)|C:\Program Files (x86)\Android\android-sdk\platforms\android-19|
 
 ## Docker images
 
-
-
-The following container images have been cached:
-
-* mcr.microsoft.com/dotnet/framework/aspnet:4.8-windowsservercore-ltsc2019 (Digest: sha256:24ffd5fad1becaf9b16f42ec6f40c90ddf56664986a87212d2d48164e3bb52ba)
-
-* mcr.microsoft.com/dotnet/framework/runtime:4.8-windowsservercore-ltsc2019 (Digest: sha256:ceaf6f000f0a0677510a5511f089071c2822dd40f34a77ca0280f96b10621858)
-
-* mcr.microsoft.com/windows/servercore:ltsc2019 (Digest: sha256:8dcc65367c900f06ad386da6a1e25d578232f7b15981092986ade2f2fd9468b8)
-
-* mcr.microsoft.com/windows/nanoserver:1809 (Digest: sha256:5de6bd32bd453d60c8f549d28845552e89ad3652566e141ac82023b6ba10374d)
-
-* microsoft/aspnetcore-build:1.0-2.0 (Digest: sha256:9ecc7c5a8a7a11dca5f08c860165646cb30d084606360a3a72b9cbe447241c0c)
+| Container   | Digest |
+| ------------| -------|
+|mcr.microsoft.com/dotnet/framework/aspnet:4.8-windowsservercore-ltsc2019| sha256:24ffd5fad1becaf9b16f42ec6f40c90ddf56664986a87212d2d48164e3bb52ba|
+| mcr.microsoft.com/dotnet/framework/runtime:4.8-windowsservercore-ltsc2019| sha256:ceaf6f000f0a0677510a5511f089071c2822dd40f34a77ca0280f96b10621858 |
+|mcr.microsoft.com/windows/servercore:ltsc2019 | sha256:8dcc65367c900f06ad386da6a1e25d578232f7b15981092986ade2f2fd9468b8 |
+|mcr.microsoft.com/windows/nanoserver:1809 | sha256:5de6bd32bd453d60c8f549d28845552e89ad3652566e141ac82023b6ba10374d |
+| microsoft/aspnetcore-build:1.0-2.0| sha256:9ecc7c5a8a7a11dca5f08c860165646cb30d084606360a3a72b9cbe447241c0c|
 
 
 
-## Visual Studio 2019 Enterprise
-
-
-| Version  | Location| The following workloads and components are installed with Visual Studio 2019 |
-| -------- | --------------------------------------- |--------- |
-|  VisualStudio/16.5.0+29911.84  | C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise | Component.Dotfuscator<br>Component.Linux.CMake<br>Component.UnityEngine.x64<br>Component.UnityEngine.x86<br>Component.Unreal.Android<br>Microsoft.Component.Azure.DataLake.Tools<br>Microsoft.Component.CookiecutterTools<br>Microsoft.Component.PythonTools.Miniconda<br>Microsoft.Component.PythonTools.Web<br>Microsoft.Component.VC.Runtime.UCRTSDK<br>Microsoft.Net.ComponentGroup.4.6.2.DeveloperTools<br>Microsoft.Net.ComponentGroup.4.7.1.DeveloperTools<br>Microsoft.Net.Component.4.7.2.SDK<br>Microsoft.Net.Component.4.7.2.TargetingPack<br>Microsoft.Net.ComponentGroup.4.7.2.DeveloperTools<br>Microsoft.Net.ComponentGroup.4.7.DeveloperTools<br>Microsoft.VisualStudio.Component.AspNet45<br>Microsoft.VisualStudio.Component.Azure.Kubernetes.Tools<br>Microsoft.VisualStudio.Component.Azure.MobileAppsSdk<br>Microsoft.VisualStudio.Component.Azure.ServiceFabric.Tools<br>Microsoft.VisualStudio.Component.Azure.Storage.AzCopy<br>Microsoft.VisualStudio.Component.Debugger.JustInTime<br>Microsoft.VisualStudio.Component.DslTools<br>Microsoft.VisualStudio.Component.EntityFramework<br>Microsoft.VisualStudio.Component.FSharp.Desktop<br>Microsoft.VisualStudio.Component.LinqToSql<br>Microsoft.VisualStudio.Component.PortableLibrary<br>Microsoft.VisualStudio.Component.TeamOffice<br>Microsoft.VisualStudio.Component.TestTools.CodedUITest<br>Microsoft.VisualStudio.Component.TestTools.WebLoadTest<br>Microsoft.VisualStudio.Component.UWP.VC.ARM64<br>Microsoft.VisualStudio.Component.VC.140<br>Microsoft.VisualStudio.Component.VC.ATL.ARM<br>Microsoft.VisualStudio.Component.VC.ATLMFC<br>Microsoft.VisualStudio.Component.VC.ATLMFC.Spectre<br>Microsoft.VisualStudio.Component.VC.CLI.Support<br>Microsoft.VisualStudio.Component.VC.CMake.Project<br>Microsoft.VisualStudio.Component.VC.DiagnosticTools<br>Microsoft.VisualStudio.Component.VC.Llvm.ClangToolset<br>Microsoft.VisualStudio.Component.VC.MFC.ARM<br>Microsoft.VisualStudio.Component.VC.MFC.ARM.Spectre<br>Microsoft.VisualStudio.Component.VC.MFC.ARM64<br>Microsoft.VisualStudio.Component.VC.MFC.ARM64.Spectre<br>Microsoft.VisualStudio.Component.VC.Redist.MSM<br>Microsoft.VisualStudio.Component.VC.Runtimes.ARM.Spectre<br>Microsoft.VisualStudio.Component.VC.Runtimes.ARM64.Spectre<br>Microsoft.VisualStudio.Component.VC.Runtimes.x86.x64.Spectre<br>Microsoft.VisualStudio.Component.VC.TestAdapterForBoostTest<br>Microsoft.VisualStudio.Component.VC.TestAdapterForGoogleTest<br>Microsoft.VisualStudio.Component.VC.v141<br>Microsoft.VisualStudio.Component.VC.v141.x86.x64<br>Microsoft.VisualStudio.Component.VC.v141.x86.x64.Spectre<br>Microsoft.VisualStudio.Component.VC.v141.ARM.Spectre<br>Microsoft.VisualStudio.Component.VC.v141.ARM64.Spectre<br>Microsoft.VisualStudio.Component.VC.v141.ATL.ARM.Spectre<br>Microsoft.VisualStudio.Component.VC.v141.ATL.ARM64.Spectre<br>Microsoft.VisualStudio.Component.VC.v141.ATL.Spectre<br>Microsoft.VisualStudio.Component.VC.v141.MFC.ARM.Spectre<br>Microsoft.VisualStudio.Component.VC.v141.MFC.ARM64.Spectre<br>Microsoft.VisualStudio.Component.VC.v141.MFC.Spectre<br>Microsoft.VisualStudio.Component.Windows10SDK.16299<br>Microsoft.VisualStudio.Component.Windows10SDK.17134<br>Microsoft.VisualStudio.Component.Windows10SDK.17763<br>Microsoft.VisualStudio.Component.Windows10SDK.18362<br>Microsoft.VisualStudio.Component.WinXP<br>Microsoft.VisualStudio.ComponentGroup.Azure.CloudServices<br>Microsoft.VisualStudio.ComponentGroup.Azure.ResourceManager.Tools<br>Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Llvm.Clang<br>Microsoft.VisualStudio.ComponentGroup.Web.CloudTools<br>Microsoft.VisualStudio.Workload.Azure<br>Microsoft.VisualStudio.Workload.Data<br>Microsoft.VisualStudio.Workload.DataScience<br>Microsoft.VisualStudio.Workload.ManagedDesktop<br>Microsoft.VisualStudio.Workload.ManagedGame<br>Microsoft.VisualStudio.Workload.NativeCrossPlat<br>Microsoft.VisualStudio.Workload.NativeDesktop<br>Microsoft.VisualStudio.Workload.NativeGame<br>Microsoft.VisualStudio.Workload.NativeMobile<br>Microsoft.VisualStudio.Workload.NetCoreTools<br>Microsoft.VisualStudio.Workload.NetCrossPlat<br>Microsoft.VisualStudio.Workload.NetWeb<br>Microsoft.VisualStudio.Workload.Node<br>Microsoft.VisualStudio.Workload.Office<br>Microsoft.VisualStudio.Workload.Python<br>Microsoft.VisualStudio.Workload.Universal<br>Microsoft.VisualStudio.Workload.VisualStudioExtension |
 
 
 
@@ -135,123 +160,8 @@ _Version:_ 1.1.1809.18001<br/>
 
 
 
-## Android SDK Build Tools
-
-| Version| Location|
-| -------------------------------------- | -------- |
-|  29.0.3   | C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.3 |
-|  29.0.2 | C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  29.0.0 | C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  28.0.3 | C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  28.0.2 | C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  28.0.1 | C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  28.0.0 | C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  27.0.3| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  27.0.2| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  27.0.1| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  27.0.0 | C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|   26.0.3| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  26.0.2| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|   26.0.1| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  26.0.0| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  25.0.3| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  25.0.2| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  25.0.1| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  25.0.0 | C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  24.0.3| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  24.0.2| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  24.0.1| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  24.0.0| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  23.0.3| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  23.0.2| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  23.0.1| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  22.0.1| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  21.1.2| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  20.0.0| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
-|  19.1.0| C:\Program Files (x86)\Android\android-sdk\build-tools\29.0.2 |
 
 
-## Android SDK Platforms
-
-
-
-#### 10 (API 29)
-
-
-
-_Location:_ C:\Program Files (x86)\Android\android-sdk\platforms\android-29
-
-
-
-#### 9 (API 28)
-
-
-
-_Location:_ C:\Program Files (x86)\Android\android-sdk\platforms\android-28
-
-
-
-#### 8.1.0 (API 27)
-
-
-
-_Location:_ C:\Program Files (x86)\Android\android-sdk\platforms\android-27
-
-
-
-#### 8.0.0 (API 26)
-
-
-
-_Location:_ C:\Program Files (x86)\Android\android-sdk\platforms\android-26
-
-
-
-#### 7.1.1 (API 25)
-
-
-
-_Location:_ C:\Program Files (x86)\Android\android-sdk\platforms\android-25
-
-
-
-#### 7.0 (API 24)
-
-
-
-_Location:_ C:\Program Files (x86)\Android\android-sdk\platforms\android-24
-
-
-
-#### 6.0 (API 23)
-
-
-
-_Location:_ C:\Program Files (x86)\Android\android-sdk\platforms\android-23
-
-
-
-#### 5.1.1 (API 22)
-
-
-
-_Location:_ C:\Program Files (x86)\Android\android-sdk\platforms\android-22
-
-
-
-#### 5.0.1 (API 21)
-
-
-
-_Location:_ C:\Program Files (x86)\Android\android-sdk\platforms\android-21
-
-
-
-#### 4.4.2 (API 19)
-
-
-
-_Location:_ C:\Program Files (x86)\Android\android-sdk\platforms\android-19
 
 
 
@@ -417,32 +327,19 @@ _Description:_ .NET has been configured to use TLS 1.2 by default
 
 
 
-## Azure CLI
-
-
-
-_Version:_ 2.2.0
-
-_Environment:_
-
-* PATH: contains location of az.cmd
-
-
-
 ## Azure DevOps Cli extension
 
 
 
 _Version:_ azure-devops 0.17.0
 
-
-
 ## Python
 
 
 
-_Version:_ 2.7.17 (x64)<br/>_Version:_ 3.5.4 (x64)<br/>_Version:_ 3.6.8 (x64)<br/>_Version:_ 3.7.6 (x64)<br/>_Version:_ 3.8.2 (x64)<br/>_Version:_ 2.7.17 (x86)<br/>_Version:_ 3.5.4 (x86)<br/>_Version:_ 3.6.8 (x86)<br/>_Version:_ 3.7.6 (x86)<br/>_Version:_ 3.8.2 (x86)<br/><br/>__System default version:__ Python 3.7.6<br/>_Environment:_<br/>* Location: C:\hostedtoolcache\windows\Python\3.7.6\x64<br/>* PATH: contains the location of Python 3.7.6<br/>
 
+
+_Version:_ 2.7.17 (x64)<br/>_Version:_ 3.5.4 (x64)<br/>_Version:_ 3.6.8 (x64)<br/>_Version:_ 3.7.6 (x64)<br/>_Version:_ 3.8.2 (x64)<br/>_Version:_ 2.7.17 (x86)<br/>_Version:_ 3.5.4 (x86)<br/>_Version:_ 3.6.8 (x86)<br/>_Version:_ 3.7.6 (x86)<br/>_Version:_ 3.8.2 (x86)<br/><br/>__System default version:__ Python 3.7.6<br/>_Environment:_<br/>* Location: C:\hostedtoolcache\windows\Python\3.7.6\x64<br/>* PATH: contains the location of Python 3.7.6<br/>
 
 
 ## PyPy
@@ -468,24 +365,6 @@ _Version:_ 2.4.9 (x64)<br/>_Version:_ 2.5.7 (x64)<br/>_Version:_ 2.6.5 (x64)<br/
 _Version:_ 1.1.1 at C:\Program Files\OpenSSL\bin\openssl.exe<br/>_Version:_ 1.1.1d at C:\Strawberry\c\bin\openssl.exe<br/>_Version:_ 1.1.1d at C:\Program Files\Git\mingw64\bin\openssl.exe<br/>_Version:_ 1.1.1d at C:\Program Files\Git\usr\bin\openssl.exe<br/>_Version:_ 1.0.2j at C:\Program Files (x86)\Subversion\bin\openssl.exe<br/>
 
 
-
-## Perl
-
-
-
-_Version:_ v5.30.2<br/>
-
-
-
-## Git
-
-
-
-_Version:_ 2.25.1<br/>
-
-_Environment:_
-
-* PATH: contains location of git.exe
 
 
 
@@ -630,44 +509,6 @@ _Version:_ 1.8.17<br/>
 _Environment:_
 
 * PATH: contains location of svn.exe
-
-
-
-## sbt
-
-
-
-
-
-## Google Chrome
-
-
-
-_version:_
-
-80.0.3987.149
-
-
-
-## Microsoft Edge
-
-
-
-_version:_
-
-80.0.361.66
-
-
-
-## Mozilla Firefox
-
-
-
-_version:_
-
-74.0
-
-
 
 ## Selenium Web Drivers
 
@@ -832,29 +673,6 @@ _Environment:_
 
 * M2_HOME: Maven installation root
 
-
-
-## Gradle
-
-
-
-_Version:_ 6.2.2<br/>
-
-_Environment:_
-
-* PATH: contains location of gradle
-
-
-
-## Cmake
-
-
-
-_Version:_ 3.16.5<br/>
-
-_Environment:_
-
-* PATH: contains location of cmake.exe
 
 
 
