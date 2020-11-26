@@ -33,18 +33,15 @@ function Get-ToolcacheGoVersions {
     return Get-ChildItem $toolcachePath -Name | Sort-Object { [Version]$_ }
 }
 
-function Build-ToolcacheSection { 
+function Build-ToolcacheSection {
     $output = ""
     $output += New-MDHeader "Cached Tools" -Level 3
     $output += New-MDHeader "Ruby" -Level 4
     $output += New-MDList -Lines (Get-ToolcacheRubyVersions) -Style Unordered
     $output += New-MDHeader "Python" -Level 4
     $output += New-MDList -Lines (Get-ToolcachePythonVersions) -Style Unordered
-    
-    if ($os.IsLessThanBigSur) {
-        $output += New-MDHeader "PyPy" -Level 4
-        $output += New-MDList -Lines (Get-ToolcachePyPyVersions) -Style Unordered
-    }
+    $output += New-MDHeader "PyPy" -Level 4
+    $output += New-MDList -Lines (Get-ToolcachePyPyVersions) -Style Unordered
 
     if( -not $os.IsHighSierra) {
         $output += New-MDHeader "Node.js" -Level 4

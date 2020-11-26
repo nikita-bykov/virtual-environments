@@ -186,6 +186,7 @@
                 "./provision/core/edge.sh",
                 "./provision/core/firefox.sh",
                 "./provision/core/toolcache.sh",
+                "./provision/core/pypy.sh",
                 "./provision/core/pipx-packages.sh"
             ],
             "environment_vars": [
