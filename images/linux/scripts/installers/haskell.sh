@@ -7,34 +7,23 @@
 # Source the helpers for use with the script
 source $HELPER_SCRIPTS/etc-environment.sh
 
-# Install Herbert V. Riedel's PPA for managing multiple version of ghc on ubuntu.
-# https://launchpad.net/~hvr/+archive/ubuntu/ghc
-apt-get install -y software-properties-common
-add-apt-repository -y ppa:hvr/ghc
-apt-get update
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+export PATH="$HOME/.ghcup/bin:$PATH"
+echo 'export PATH="$PATH:$HOME/.ghcup/bin"' >> "$HOME/.bashrc"
 
-# Get 3 latest Haskell Major.Minor versions
-allGhcVersions=$(apt-cache search "^ghc-" | grep -Po '(\d*\.){2}\d*' | sort --unique --version-sort)
-ghcMajorMinorVersions=$(echo "$allGhcVersions" | cut -d "." -f 1,2 | sort --unique --version-sort | tail -3)
+# ghcup output looks like this "ghc 8.6.4 base-4.12.0.0 hls-powered", need to take all the first versions only(8.6.4 in that case) and avoid pre-release ones
+availableVersions=$(ghcup list -t ghc -r | grep -v "prerelease" | awk '{print $2}')
 
-for version in $ghcMajorMinorVersions; do
-    # Get latest patch version for given Major.Minor one (ex. 8.6.5 for 8.6) and install it
-    exactVersion=$(echo "$allGhcVersions" | grep $version | sort --unique --version-sort | tail -1)
-    apt-get install -y ghc-$exactVersion
-    ghcInstalledVersions+=("$exactVersion")
-    defaultGHCVersion=$exactVersion
+# Install 3 latest major versions(For instance 8.6.5, 8.8.4, 8.10.2)
+minorMajorVersions=$(echo "$availableVersions" | cut -d"." -f 1,2 | uniq | tail -n3)
+for majorMinorVersion in $minorMajorVersions; do
+    fullVersion=$(echo "$availableVersions" | grep "$majorMinorVersion." | tail -n1)
+    echo "install ghc version $fullVersion..."
+    ghcup install $fullVersion
+    ghcup set $fullVersion
 done
 
-# Get latest cabal version
-cabalVersion=$(apt-cache search cabal-install-[0-9] | grep -Po '\d*\.\d*' | sort --unique --version-sort | tail -1)
-
-apt-get install -y cabal-install-$cabalVersion
-
-# Install the latest stable release of haskell stack
-curl -sSL https://get.haskellstack.org/ | sh
-
-# Create symlink for ghc and cabal in /usr/bin
-ln -s "/opt/ghc/$defaultGHCVersion/bin/ghc" "/usr/bin/ghc"
-ln -s "/opt/cabal/$cabalVersion/bin/cabal" "/usr/bin/cabal"
+echo "install cabal..."
+ghcup install-cabal
 
 invoke_tests "Haskell"
