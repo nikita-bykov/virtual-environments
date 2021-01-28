@@ -10,6 +10,7 @@ source $HELPER_SCRIPTS/etc-environment.sh
 mkdir -p /usr/bin/.ghcup/bin
 curl https://gitlab.haskell.org/haskell/ghcup/raw/master/ghcup -o /usr/bin/.ghcup/bin/ghcup
 chmod +x /usr/bin/.ghcup/bin/ghcup
+export PATH="/usr/bin/.cabal/bin:/usr/bin/.ghcup/bin:$PATH"
 echo 'export PATH="/usr/bin/.cabal/bin:/usr/bin/.ghcup/bin:$PATH"' | tee -a /etc/skel/.bashrc
 
 ghcup upgrade
