@@ -27,4 +27,7 @@ done
 echo "install cabal..."
 ghcup install-cabal
 
+# Install the latest stable release of haskell stack
+curl -sSL https://get.haskellstack.org/ | sh
+
 invoke_tests "Haskell"
