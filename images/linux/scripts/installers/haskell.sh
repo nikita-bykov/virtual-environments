@@ -13,8 +13,6 @@ chmod +x /usr/bin/.ghcup/bin/ghcup
 export PATH="/usr/bin/.ghcup/bin:$PATH"
 echo 'export PATH="/usr/bin/.ghcup/bin:$PATH"' | tee -a /etc/skel/.bashrc
 
-ghcup upgrade
-
 availableVersions=$(ghcup list -t ghc -r | grep -v "prerelease" | awk '{print $2}')
 
 minorMajorVersions=$(echo "$availableVersions" | cut -d"." -f 1,2 | uniq | tail -n3)
