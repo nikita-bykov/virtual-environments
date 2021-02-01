@@ -7,11 +7,11 @@
 # Source the helpers for use with the script
 source $HELPER_SCRIPTS/etc-environment.sh
 
-mkdir -p /usr/bin/.ghcup/bin
-curl https://downloads.haskell.org/~ghcup/x86_64-linux-ghcup -o /usr/bin/.ghcup/bin/ghcup
-chmod +x /usr/bin/.ghcup/bin/ghcup
-export PATH="/usr/bin/.ghcup/bin:$PATH"
-echo 'export PATH="/usr/bin/.ghcup/bin:$PATH"' | tee -a /etc/skel/.bashrc
+export BOOTSTRAP_HASKELL_NONINTERACTIVE=1
+export GHCUP_INSTALL_BASE_PREFIX=/usr/local
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+export PATH="$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin:$PATH"
+echo 'export PATH="$PATH:$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin"' | tee -a /etc/skel/.bashrc
 
 availableVersions=$(ghcup list -t ghc -r | grep -v "prerelease" | awk '{print $2}')
 
