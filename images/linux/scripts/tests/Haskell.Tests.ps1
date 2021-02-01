@@ -1,21 +1,21 @@
 Describe "Haskell" {
 
-    # $GHCCommonPath = "/opt/ghc"
-    # $GHCVersions = Get-ChildItem -Path $GHCCommonPath | Where-Object { $_.Name -match "\d+\.\d+" }
+    $GHCCommonPath = "/usr/local/.ghcup/bin/ghc"
+    $GHCVersions = Get-ChildItem -Path $GHCCommonPath | Where-Object { $_.Name -match "\d+\.\d+" }
     
-    # $testCase = @{ GHCVersions = $GHCVersions }
+    $testCase = @{ GHCVersions = $GHCVersions }
 
-    # It "GHC directory contains three version of GHC" -TestCases $testCase {
-    #     param ([object] $GHCVersions)
-    #     $GHCVersions.Count | Should -Be 3
-    # }
+    It "GHC directory contains three version of GHC" -TestCases $testCase {
+        param ([object] $GHCVersions)
+        $GHCVersions.Count | Should -Be 3
+    }
 
-    # $testCases = $GHCVersions | ForEach-Object { @{ GHCPath = "${_}/bin/ghc"} }
+    $testCases = $GHCVersions | ForEach-Object { @{ GHCPath = "${_}/bin/ghc"} }
 
-    # It "GHC version <GHCPath>" -TestCases $testCases {
-    #         param ([string] $GHCPath)
-    #         "$GHCPath --version" | Should -ReturnZeroExitCode
-    # }
+    It "GHC version <GHCPath>" -TestCases $testCases {
+            param ([string] $GHCPath)
+            "$GHCPath --version" | Should -ReturnZeroExitCode
+    }
 
     It "GHCup" {
         "ghcup --version" | Should -ReturnZeroExitCode

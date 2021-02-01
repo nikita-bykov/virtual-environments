@@ -9,6 +9,7 @@ source $HELPER_SCRIPTS/etc-environment.sh
 
 export BOOTSTRAP_HASKELL_NONINTERACTIVE=1
 export GHCUP_INSTALL_BASE_PREFIX=/usr/local
+
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 export PATH="$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin:$PATH"
 echo 'export PATH="$PATH:$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin"' | tee -a /etc/skel/.bashrc
@@ -19,12 +20,12 @@ minorMajorVersions=$(echo "$availableVersions" | cut -d"." -f 1,2 | uniq | tail 
 for majorMinorVersion in $minorMajorVersions; do
     fullVersion=$(echo "$availableVersions" | grep "$majorMinorVersion." | tail -n1)
     echo "install ghc version $fullVersion..."
-    ghcup install $fullVersion
+    ghcup install ghc $fullVersion
     ghcup set $fullVersion
 done
 
 echo "install cabal..."
-ghcup install-cabal
+ghcup install cabal
 
 # Install the latest stable release of haskell stack
 curl -sSL https://get.haskellstack.org/ | sh
