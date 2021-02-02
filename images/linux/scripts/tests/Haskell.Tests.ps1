@@ -1,7 +1,7 @@
 Describe "Haskell" {
 
-    $GHCCommonPath = "/usr/local/.ghcup/bin/ghc"
-    $GHCVersions = Get-ChildItem -Path $GHCCommonPath | Where-Object { $_.Name -match "\d+\.\d+" }
+    $GHCCommonPath = "/usr/local/.ghcup/bin"
+    $GHCVersions = Get-ChildItem -Path $GHCCommonPath | Where-Object { $_.Name -match "^ghc-\d+\.\d+$" }
     
     $testCase = @{ GHCVersions = $GHCVersions }
 
