@@ -10,7 +10,7 @@ Describe "Haskell" {
         $GHCVersions.Count | Should -Be 3
     }
 
-    $testCases = $GHCVersions | ForEach-Object { @{ GHCPath = "${_}/bin/ghc"} }
+    $testCases = $GHCVersions | ForEach-Object { @{ GHCPath = "${_}"} }
 
     It "GHC version <GHCPath>" -TestCases $testCases {
             param ([string] $GHCPath)
