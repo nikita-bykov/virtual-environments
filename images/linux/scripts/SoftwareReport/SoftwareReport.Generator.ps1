@@ -175,7 +175,6 @@ $markdown += New-MDNewLine
 $markdown += New-MDHeader "Haskell" -Level 3
 $markdown += New-MDList -Style Unordered -Lines (@(
     (Get-GHCVersion),
-    (Get-GHCupVersion)
     (Get-CabalVersion),
     (Get-StackVersion)
     ) | Sort-Object
