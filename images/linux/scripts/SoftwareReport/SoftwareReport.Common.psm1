@@ -214,9 +214,13 @@ function Build-PHPTable {
 }
 
 function Get-GHCVersion {
-    $(ghc --version) -match "version (?<version>\d+\.\d+\.\d+)" | Out-Null
-    $ghcVersion = $Matches.version
+    $ghcVersion = Run-Command "ghc --version" | Take-Part -Part 7
     return "GHC $ghcVersion"
+}
+
+function Get-GHCupVersion {
+    $ghcUpVersion = Run-Command "ghcup --version" | Take-Part -Part 5
+    return "GHCup $ghcUpVersion"
 }
 
 function Get-CabalVersion {
