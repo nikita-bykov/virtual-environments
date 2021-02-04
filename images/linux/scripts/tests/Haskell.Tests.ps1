@@ -1,7 +1,7 @@
 Describe "Haskell" {
 
-    $GHCCommonPath = "/usr/local/.ghcup/bin"
-    $GHCVersions = Get-ChildItem -Path $GHCCommonPath | Where-Object { $_.Name -match "^ghc-\d+\.\d+$" }
+    $GHCCommonPath = "/usr/local/.ghcup/ghc"
+    $GHCVersions = Get-ChildItem -Path $GHCCommonPath | Where-Object { $_.Name -match "\d+\.\d+" }
     
     $testCase = @{ GHCVersions = $GHCVersions }
 
@@ -10,7 +10,7 @@ Describe "Haskell" {
         $GHCVersions.Count | Should -Be 3
     }
 
-    $testCases = $GHCVersions | ForEach-Object { @{ GHCPath = "${_}"} }
+    $testCases = $GHCVersions | ForEach-Object { @{ GHCPath = "${_}/bin/ghc"} }
 
     It "GHC version <GHCPath>" -TestCases $testCases {
             param ([string] $GHCPath)
