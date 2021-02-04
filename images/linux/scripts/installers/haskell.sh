@@ -9,10 +9,11 @@ source $HELPER_SCRIPTS/etc-environment.sh
 
 export BOOTSTRAP_HASKELL_NONINTERACTIVE=1
 export GHCUP_INSTALL_BASE_PREFIX=/usr/local
+ghcup_bin=$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin
 
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
-export PATH="$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin:$PATH"
-echo 'export PATH="$PATH:$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin"' | tee -a /etc/skel/.bashrc
+export PATH="$ghcup_bin:$PATH"
+prependEtcEnvironmentPath $ghcup_bin
 
 availableVersions=$(ghcup list -t ghc -r | grep -v "prerelease" | awk '{print $2}')
 
