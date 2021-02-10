@@ -6,7 +6,7 @@ param (
 $ErrorActionPreference = "Stop"
 
 Import-Module MarkdownPS
-Import-Module (Join-Path $PSScriptRoot "SoftwareReport.Android.psm1") -DisableNameChecking
+# Import-Module (Join-Path $PSScriptRoot "SoftwareReport.Android.psm1") -DisableNameChecking
 Import-Module (Join-Path $PSScriptRoot "SoftwareReport.Browsers.psm1") -DisableNameChecking
 Import-Module (Join-Path $PSScriptRoot "SoftwareReport.CachedTools.psm1") -DisableNameChecking
 Import-Module (Join-Path $PSScriptRoot "SoftwareReport.Common.psm1") -DisableNameChecking
@@ -248,9 +248,9 @@ $markdown += New-MDNewLine
 
 $markdown += Build-WebServersSection
 
-$markdown += New-MDHeader "Android" -Level 3
-$markdown += Build-AndroidTable | New-MDTable
-$markdown += New-MDNewLine
+# $markdown += New-MDHeader "Android" -Level 3
+# $markdown += Build-AndroidTable | New-MDTable
+# $markdown += New-MDNewLine
 
 $markdown += New-MDHeader "Cached Docker images" -Level 3
 $markdown += Get-CachedDockerImagesTableData | New-MDTable
