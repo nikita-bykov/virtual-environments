@@ -12,7 +12,7 @@ installJavaFromAdoptOpenJDK() {
     javaToolcacheVersionArchPath=$javaToolcacheVersionPath/x64
 
     download_with_retries $archivePath /tmp OpenJDK$JAVA_VERSION.tar.gz
-    mkdir "/tmp/jdk-$fullVersion" && tar -xzf "/tmp/OpenJDK$JAVA_VERSION.tar.gz" -C "/tmp/jdk-$fullVersion"
+    mkdir /tmp/jdk-$fullVersion && tar -xzf /tmp/OpenJDK$JAVA_VERSION.tar.gz -C /tmp/jdk-$fullVersion
     mkdir -p $javaToolcacheVersionArchPath
     mv /tmp/jdk-$fullVersion/*/* $javaToolcacheVersionArchPath
 
