@@ -5,6 +5,7 @@ JAVA_TOOLCACHE_PATH=$AGENT_TOOLSDIRECTORY/Java_Adoptium_jdk
 
 installJavaFromAdoptOpenJDK() {
     local JAVA_VERSION=$1
+
     javaRelease=$(curl -s "https://api.adoptopenjdk.net/v3/assets/latest/$JAVA_VERSION/hotspot")
     archivePath=$(echo $javaRelease | jq -r '[.[] | select(.binary.os=="mac") | .binary.package.link][0]')
     fullVersion=$(echo $javaRelease | jq -r '[.[] | select(.binary.os=="mac") | .version.openjdk_version][0]')
@@ -16,7 +17,7 @@ installJavaFromAdoptOpenJDK() {
     mkdir -p $javaToolcacheVersionArchPath && mv /tmp/jdk-$fullVersion/*/* $javaToolcacheVersionArchPath
 
     local JAVA_HOME_PATH=$javaToolcacheVersionArchPath/Contents/Home
-    if [[ $JAVA_VERSION == "8" ]]; then
+    if [[ $JAVA_VERSION == $JAVA_DEFAULT ]]; then
         echo "export JAVA_HOME=${JAVA_HOME_PATH}" >> "${HOME}/.bashrc"
         export PATH="$JAVA_HOME_PATH:$PATH"
     fi
@@ -24,6 +25,7 @@ installJavaFromAdoptOpenJDK() {
 }
 
 JAVA_VERSIONS_LIST=($(get_toolset_value '.java.versions | .[]'))
+JAVA_DEFAULT=$(get_toolset_value '.java.default')
 
 for JAVA_VERSION in "${JAVA_VERSIONS_LIST[@]}"
 do
