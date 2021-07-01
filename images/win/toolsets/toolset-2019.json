@@ -374,5 +374,23 @@
             "3.1",
             "5.0"
         ]
+    },
+    "choco": {
+        "common_packages": [
+            "7zip.install",
+            "azcopy10",
+            "Bicep",
+            "gitversion.portable",
+            "innosetup",
+            "jq",
+            "NuGet.CommandLine",
+            "openssl.light",
+            "packer",
+            "strawberryperl",
+            "pulumi",
+            "tortoisesvn",
+            "swig",
+            "vswhere"
+        ]
     }
 }
