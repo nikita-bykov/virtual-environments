@@ -14,21 +14,6 @@ Describe "Azure Cosmos DB Emulator" {
     }
 }
 
-Describe "Bazel" {
-    It "<ToolName>" -TestCases @(
-        @{ ToolName = "bazel" }
-        @{ ToolName = "bazelisk" }
-    ) {
-        "$ToolName --version"| Should -ReturnZeroExitCode
-    }
-}
-
-Describe "CMake" {
-    It "cmake" {
-        "cmake --version" | Should -ReturnZeroExitCode
-    }
-}
-
 Describe "CodeQLBundle" {
     It "CodeQLBundle" {
         $CodeQLVersionsWildcard = Join-Path $Env:AGENT_TOOLSDIRECTORY -ChildPath "codeql" | Join-Path -ChildPath "*"
@@ -57,16 +42,6 @@ Describe "DACFx" {
 Describe "DotnetTLS" {
     It "Tls 1.2 is enabled" {
         [Net.ServicePointManager]::SecurityProtocol -band "Tls12" | Should -Be Tls12
-    }
-}
-
-Describe "Julia" {
-    It "Julia path exists" {
-        "C:\Julia" | Should -Exist
-    }
-
-    It "Julia" {
-        "julia --version" | Should -ReturnZeroExitCode
     }
 }
 

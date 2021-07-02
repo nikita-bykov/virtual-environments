@@ -391,6 +391,22 @@
             "tortoisesvn",
             "swig",
             "vswhere"
+        ],
+        "common_packages_with_args": [
+            {
+                "name": "julia",
+                "args": [
+                    "--ia",
+                    "/DIR=C:\\Julia"
+                ]
+            },
+            {
+                "name": "cmake.install",
+                "args": [
+                    "--installargs",
+                    "ADD_CMAKE_TO_PATH=\"System\""
+                ]
+            }
         ]
     }
 }

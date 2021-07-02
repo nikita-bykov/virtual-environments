@@ -81,3 +81,28 @@ Describe "VSWhere" {
         "vswhere" | Should -ReturnZeroExitCode
     }
 }
+
+Describe "Bazel" {
+    It "<ToolName>" -TestCases @(
+        @{ ToolName = "bazel" }
+        @{ ToolName = "bazelisk" }
+    ) {
+        "$ToolName --version"| Should -ReturnZeroExitCode
+    }
+}
+
+Describe "Julia" {
+    It "Julia path exists" {
+        "C:\Julia" | Should -Exist
+    }
+
+    It "Julia" {
+        "julia --version" | Should -ReturnZeroExitCode
+    }
+}
+
+Describe "CMake" {
+    It "cmake" {
+        "cmake --version" | Should -ReturnZeroExitCode
+    }
+}
