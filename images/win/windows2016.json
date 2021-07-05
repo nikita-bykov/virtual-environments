@@ -238,7 +238,6 @@
                 "{{ template_dir }}/scripts/Installers/Install-GitHub-CLI.ps1",
                 "{{ template_dir }}/scripts/Installers/Install-PHP.ps1",
                 "{{ template_dir }}/scripts/Installers/Install-Rust.ps1",
-                "{{ template_dir }}/scripts/Installers/Install-Julia.ps1",
                 "{{ template_dir }}/scripts/Installers/Install-Chrome.ps1",
                 "{{ template_dir }}/scripts/Installers/Install-Edge.ps1",
                 "{{ template_dir }}/scripts/Installers/Install-Firefox.ps1",
@@ -279,7 +278,6 @@
             ],
             "scripts": [
                 "{{ template_dir }}/scripts/Installers/Install-WinAppDriver.ps1",
-                "{{ template_dir }}/scripts/Installers/Install-Cmake.ps1",
                 "{{ template_dir }}/scripts/Installers/Install-R.ps1",
                 "{{ template_dir }}/scripts/Installers/Install-AWS.ps1",
                 "{{ template_dir }}/scripts/Installers/Install-DACFx.ps1",
