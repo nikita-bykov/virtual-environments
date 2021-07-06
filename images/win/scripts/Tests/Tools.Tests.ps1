@@ -176,3 +176,4 @@ Describe "Pipx" {
         "pipx --version" | Should -ReturnZeroExitCode
     }
 }
+
